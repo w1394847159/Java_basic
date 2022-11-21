@@ -19,21 +19,21 @@ public class BubboSort {
     //冒泡排序
     public void bubboSort(int[] a){
 
-        for (int i = 0; i < a.length-2; i++) {
-            for (int i1 = 0; i1 < a.length-1; i1++) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length-1; j++) {
                 int m = 0;
-                if(a[i1] > a[i1+1]){
-                    m = a[i1+1];
-                    a[i1+1] = a[i1];
-                    a[i1] = m;
+                if(a[j] > a[j+1]){
+                    m = a[j+1];
+                    a[j+1] = a[j];
+                    a[j] = m;
                 }
             }
-            int t = 0;
+            /*int t = 0;
             if(a[i] > a[i+1]){
                 t = a[i+1];
                 a[i+1] = a[i];
                 a[i] = t;
-            }
+            }*/
         }
 
         for (int i : a) {
