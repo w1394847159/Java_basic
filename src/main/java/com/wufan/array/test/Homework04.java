@@ -69,6 +69,56 @@ public class Homework04 {
     }
 
 
+    //老师讲解后自我实现
+    @Test
+    public void test3(){
+
+        //创建数组
+        int[] arr = {10,20,45,90};
+        //需要插入的数据
+        int insertNum = 28;
+        //需要插入的下标
+        int index = -1;
+
+        //获取到要插入数据的下标
+        for (int i = 0; i < arr.length; i++) {
+            //当插入元素《数组元素时，此数组元素的下标即为插入元素下表，数组元素顺序后延
+            //例如 i=26 < 45,则插入下标为 2(从0计算),45，90顺序后延
+            if(insertNum > arr[i]){
+                index = i+1;
+            }
+        }
+        //当index=-1，即当前数组没有大于插入元素的值，插入元素默认位置为最后下标+1
+        if(index == -1){
+            index = 0;
+        }
+
+        //创建新数组，存储原数组元素
+        //其余位置都按顺序插入
+        int[] arrNew = new int[arr.length + 1];
+        //i为新数组下标，j为原数组下标，原数组数据个数不变，按照顺序导入新数组，中间插入需要插入的元素
+        for (int i = 0,j=0; i <arrNew.length ; i++) {
+            //当index=i时，此位置为插入的元素位置
+            if(index == i){
+                arrNew[i] = insertNum;
+            }else {
+                arrNew[i] = arr[j];
+                //旧数组每一个元素都导入新数组中，除了插入的元素位置，其余元素位置不变
+                j++;
+            }
+
+        }
+
+        //释放原数组
+        arr = arrNew;
+
+        for (int i : arr) {
+            System.out.printf(i+",");
+        }
+
+    }
+
+
 
 
     /**
