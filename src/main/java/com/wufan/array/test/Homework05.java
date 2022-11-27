@@ -1,12 +1,37 @@
 package com.wufan.array.test;
 
+import org.junit.Test;
+
 import java.util.Random;
 
 /**
  *
  * 求最大值和最大值下标
+ * 随机生成10个整数（1_100的范围）保存到数组，
+ * 并倒序打印以及求平均值、求最大值和最大值的下标、详查找里面是否有8
  */
 public class Homework05 {
+
+    @Test
+    public void test1(){
+        int[] arr = new int[10];
+        System.out.printf("生成的数组为：");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] =(int)(Math.random() * 100)+1;
+            System.out.print(arr[i]+",");
+        }
+        System.out.println();
+
+        System.out.println(                                   "倒序输出");
+        for (int i = arr.length-1 ;i >=0; i--) {
+            System.out.print(arr[i] + ",");
+
+        }
+
+
+    }
+
+
 
     public static void main(String[] args) {
 
