@@ -9,7 +9,7 @@ package com.wufan.array.reverse;
 public class ArrayReverse02 {
 
     public static void main(String[] args) {
-        //定义一个中间变量永安里存储交换数据的值
+        //定义一个中间变量用来存储交换数据的值
         int[] a = {1,2,3,4,5,6,7};
         int m = 0;
         for (int i = 0; i < a.length / 2; i++) {

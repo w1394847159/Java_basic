@@ -74,7 +74,7 @@ public class DateTest02 {
 
         //创建指定日期对象
         Calendar c1 = Calendar.getInstance();
-        c1.set(2012,11,12);
+        c1.set(2012,11,11);
 
         //获得年份
         int year = c1.get(Calendar.YEAR);
