@@ -3,7 +3,6 @@ package com.wufan.Stream;
 import org.junit.Test;
 
 import java.io.*;
-import java.util.Locale;
 
 /**
  * 字节流字符流操作

@@ -1,8 +1,5 @@
 package com.suanfa.LinkedList;
 
-import java.io.ObjectInputStream;
-import java.util.Stack;
-
 /**
  * 从尾到头打印链表
  */
